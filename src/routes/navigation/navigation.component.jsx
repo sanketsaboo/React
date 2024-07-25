@@ -1,14 +1,14 @@
 import { Fragment } from "react"
 import { Outlet, Link } from "react-router-dom"
-
-
+import  CrwnLogo from '../../assets/crown.svg'
+import './navigation.styles.scss'
 function Navigation(){
     return(
         <Fragment>
-            <div className="naigation">
+            <div className="navigation">
                 <Link className="logo-container" to='/'>
-                    <div>
-                        Logo
+                    <div className="logo">
+                        <img src={CrwnLogo}/>
                     </div>
                 </Link>
                 <div className="nav-links-container">
@@ -16,9 +16,8 @@ function Navigation(){
                         SHOP
                     </Link>
                 </div>
-                    
-                <Outlet/>
             </div>
+            <Outlet/>
         </Fragment>
     )
 }
